@@ -1,0 +1,32 @@
+.button,
+.link {
+  display: inline-block;
+  width: auto;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: var(--font-size-s);
+  border:1px solid var(--color-text);
+  text-align: center;
+  cursor: pointer;
+  max-height: 70px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--color-background-hover);
+}
+
+
+.button {
+  background-color: var(--color-background-primary);
+  color: var(--color-text);
+}
+
+.link {
+  line-height: 1;
+  color: var(--color-text);
+  text-decoration: none;
+  border: 1px solid var(--color-text) ;
+  background-color: transparent;
+}
