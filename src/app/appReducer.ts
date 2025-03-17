@@ -7,7 +7,7 @@ export type PublicState = { aboutUs: string }
 const GET_BOOK = "GET_BOOK"
 
 
-export const publicReducer = (state: any, action: any): PublicState => {
+export const appReducer = (state: any, action: any): PublicState => {
     switch (action.type) {
         case GET_BOOK:
             return { ...state, aboutUs: action.payload }
