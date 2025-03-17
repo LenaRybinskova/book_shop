@@ -1,0 +1,8 @@
+.modalContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background-primary);
+    width: 50%;
+    height: 50%;
+}

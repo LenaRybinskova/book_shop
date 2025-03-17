@@ -1,11 +1,26 @@
-.cardListContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+.bookListContainer{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap:25px;
 }
 
+.cardListWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
 @media (max-width: 600px) {
-    .cardListContainer {
-        grid-template-columns: repeat(1, 1fr);
+    .cardListWrapper {
+        justify-content: center;
+    }
+
+    .card {
+        flex: 1 1 100%;
     }
 }
+
