@@ -9,7 +9,7 @@ export const BookList = () => {
 
     return (
         <div className={styles.cardListContainer}>
-            {books.map(book => (<Card book={book}/>))}
+            {books.map(book => (<Card key={book.id} book={book}/>))}
         </div>
     )
 }

@@ -2,11 +2,13 @@ import {Book} from '@/app/booksAPI.types.ts';
 import {authApi} from '@/app/booksAPI.ts';
 import {getRandomAuthor} from '@/common/utils/getRandomAuthor.ts';
 import {getRandomPrice} from '@/common/utils/getRandomPrice.ts';
+import {getRandomImageUrl} from '@/common/utils/getRandomImageUrl.ts';
 
 
 export type BookApp = Book & {
-    author: string;
-    price: number;
+    author: string
+    price: number
+    url:string
 };
 export type RequestStatus = 'idle' | 'loading' | 'succeeded' | 'failed'
 
@@ -29,7 +31,8 @@ export const appReducer = (state: initialStateType = initialState, action: any):
                 books: action.payload.map((book: Book) => ({
                     ...book,
                     author: getRandomAuthor(),
-                    price: getRandomPrice()
+                    price: getRandomPrice(),
+                    url:getRandomImageUrl()
                 }))
             }
         default:
@@ -54,12 +57,6 @@ export type SetBook = ReturnType<typeof setBookAC>
 export type SetAppStatus = ReturnType<typeof setAppStatusAC>
 export type AppActions = SetBook | SetAppStatus
 
-
-/*export const getAboutUsInfo = () => (dispatch: any) => {
-
-}*/
-
-
 export const fetchBooksData = () => async (dispatch: any) => {
     dispatch(setAppStatusAC('loading'))
     return authApi.getBooks()
@@ -73,15 +70,3 @@ export const fetchBooksData = () => async (dispatch: any) => {
             }
         )
 }
-
-
-/*
-export const logoutTC = (token: string) => async (dispatch: Dispatch<AuthActions>) => {
-    return authApi.logout(token)
-        .then(() => {
-            dispatch(resetAllDataAC())
-        })
-        .catch(() => {
-            throw new Error("Failed to fetch info")
-        })
-}*/

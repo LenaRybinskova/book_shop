@@ -1,11 +1,15 @@
 .cardListContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 @media (max-width: 600px) {
     .cardListContainer {
-        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+    }
+
+    .card {
+        flex: 1 1 100%;
     }
 }
