@@ -20,15 +20,15 @@ export const Cart = ({onClose}: Props) => {
     }
 
     return (
-        <div>
             <Modal open={open}>
-                <div className={styles.modalContent}>
-                    {cartItems.map(item => (<CartItem book={item} key={item.id}/>))}
-                    <Button onClick={handleModal}>закрыть</Button>
+                <div className={styles.modalContainer}>
+                    <ul className={styles.modalContent}>
+                        {cartItems.map(item => (<CartItem book={item} key={item.id}/>))}
+                    </ul>
+                    <Button onClick={handleModal} className={styles.closeModalButton}>
+                        <img src="/book_shop/close.svg" alt="Close" className={styles.icon}/>
+                    </Button>
                 </div>
             </Modal>
-        </div>
-
-
     )
 }

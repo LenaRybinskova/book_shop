@@ -14,7 +14,6 @@ const init state = {
 }}
 */
 
-
 const ADD_BOOK = 'ADD_BOOK'
 const DELETE_BOOK = 'DELETE_BOOK'
 

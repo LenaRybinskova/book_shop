@@ -22,12 +22,16 @@ export const BookList = () => {
     }
 
     return (
-        <div className={styles.bookListContainer}>
-            <Button onClick={handleCartOpen} className={styles.buttonCart}>Корзина</Button>
-            <div className={styles.cardListWrapper}>
-                {books.map(book => (<BookCard key={book.id} book={book} callback={onAddcToCart}/>))}
+        <div className={styles.container}>
+            <div className={styles.top}>
+                <Button onClick={handleCartOpen} className={styles.buttonCart}>Корзина</Button>
             </div>
-            {open && <Cart onClose={handleCartOpen} open={open}/>}
+            <div className={styles.bookListContainer}>
+                <div className={styles.cardListWrapper}>
+                    {books.map(book => (<BookCard key={book.id} book={book} callback={onAddcToCart}/>))}
+                </div>
+                {open && <Cart onClose={handleCartOpen} open={open}/>}
+            </div>
         </div>
 
 
