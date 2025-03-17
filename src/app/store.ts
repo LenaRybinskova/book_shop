@@ -13,9 +13,7 @@ export const store = configureStore({
 })
 
 export type AppRootStateType = ReturnType<typeof store.getState>
-
 export type AppRootActions = AppActions | CartActions
-
 
 export type AppThunkDispatch = ThunkDispatch<AppRootStateType, any, AppRootActions>
 export const useAppDispatch = () => useDispatch<AppThunkDispatch>()
