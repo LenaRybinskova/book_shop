@@ -1,6 +1,6 @@
 import {useAppDispatch, useAppSelector} from '@/app/store.ts';
 import {BookApp} from '@/app/appReducer.ts';
-import styles from 'src/features/BookList/ui/BookList/BookList.module.css'
+import styles from "./BookList.module.css"
 import {Button} from '@/common/components/Button';
 import {useEffect, useState} from 'react';
 import {Cart} from '@/features/Cart/ui/Cart';

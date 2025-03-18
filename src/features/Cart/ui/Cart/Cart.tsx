@@ -24,7 +24,7 @@ export const Cart = ({onClose, open}: Props) => {
                     <ul className={styles.modalContent}>
                         {cartItems.length
                             ? (cartItems.map(item => (<CartItem book={item} key={item.id}/>)))
-                            : (<p>Добавьте что то в корзину )</p>)
+                            : (<p>Добавьте что-то в корзину )</p>)
                         }
                     </ul>
                     <Button onClick={handleModal} className={styles.closeModalButton}>
