@@ -49,7 +49,10 @@ export const BookList = () => {
             </div>
             <div className={styles.bookListContainer}>
                 <div className={styles.cardListWrapper}>
-                    {booksForRender.map(book => (<BookCard key={book.id} book={book} callback={onAddcToCart}/>))}
+                    {booksForRender.length
+                        ?(booksForRender.map(book => (<BookCard key={book.id} book={book} callback={onAddcToCart}/>)))
+                        : <p>К сожалению, у нас нет книг по такой цене.</p>
+                        }
                 </div>
                 {open && <Cart onClose={handleCartOpen} open={open}/>}
             </div>

@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import {Button} from '@/common/components/Button';
+import styles from "./FormFilter.module.css"
 
 type Props = {
     handleFilter:(price:number)=>void
@@ -19,7 +20,7 @@ export const FormFilter = (props:Props) => {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
             <input
                 type="text"
                 {...register("number")}
