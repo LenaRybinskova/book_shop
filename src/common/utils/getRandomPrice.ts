@@ -1,0 +1,1 @@
+export const getRandomPrice = () => Math.floor(Math.random() * (500 - 100 + 1)) + 100;

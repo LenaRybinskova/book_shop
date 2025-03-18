@@ -1,0 +1,12 @@
+.itemContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 1px solid var(--color-background-hover);
+}
+
+.itemContainer p {
+    margin: 0;
+}
+

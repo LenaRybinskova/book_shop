@@ -1,12 +1,19 @@
-import React from 'react'
 import '../app/App.css'
+import {HashRouter, Route, Routes} from 'react-router-dom';
+import {PublicPage} from '@/features/publicPage/ui/PublicPage.tsx';
+import {BookList} from '@/features/BookList/ui/BookList/BookList.tsx';
+
+
 
 function App() {
 
     return (
-        <div>
-            Lena
-        </div>
+        <HashRouter basename={import.meta.env.VITE_PUBLIC_URL}>
+            <Routes>
+                <Route path="/" element={<PublicPage/>}/>
+                <Route path="/catalog" element={<BookList/>}/>
+            </Routes>
+        </HashRouter>
     )
 }
 

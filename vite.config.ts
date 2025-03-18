@@ -8,7 +8,7 @@ export default defineConfig({
   base:"/book_shop",
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'), // Теперь @ ссылается на src
+      '@': path.resolve(__dirname, 'src'),
     },
   },
 })
