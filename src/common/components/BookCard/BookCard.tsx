@@ -18,7 +18,7 @@ export const BookCard = ({book, callback}: Props) => {
 
     return (
         <div className={styles.cardContainer}>
-            <img src={url} alt={title} width={250} height={250}/>
+            <img src={url} alt={title} width={220} height={220}/>
             <div className={styles.infoWrapper}>
                 <h3 className={styles.title}>{`Название книги: ${title}`}</h3>
                 <p className={styles.author}>{`Автор: ${author}`}</p>

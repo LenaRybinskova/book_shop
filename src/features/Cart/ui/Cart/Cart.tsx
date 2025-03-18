@@ -10,7 +10,7 @@ type Props = {
     open: boolean
 }
 
-export const Cart = ({onClose}: Props) => {
+export const Cart = ({onClose, open}: Props) => {
 
     const cart = useAppSelector(state => state.cart.cart)
     const cartItems = Object.values(cart);
@@ -18,12 +18,14 @@ export const Cart = ({onClose}: Props) => {
     const handleModal = () => {
         onClose(true)
     }
-
     return (
             <Modal open={open}>
                 <div className={styles.modalContainer}>
                     <ul className={styles.modalContent}>
-                        {cartItems.map(item => (<CartItem book={item} key={item.id}/>))}
+                        {cartItems.length
+                            ? (cartItems.map(item => (<CartItem book={item} key={item.id}/>)))
+                            : (<p>Добавьте что-то в корзину )</p>)
+                        }
                     </ul>
                     <Button onClick={handleModal} className={styles.closeModalButton}>
                         <img src="/book_shop/close.svg" alt="Close" className={styles.icon}/>
