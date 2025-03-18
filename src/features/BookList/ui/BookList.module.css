@@ -1,12 +1,28 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
+    margin: 0;
 }
 
-.top{
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0; /* Фиксируем хедер вверху */
+    width: 100%;
+    background-color: white; /* Чтобы хедер не был прозрачным */
+    z-index: 100; /* Чтобы он был поверх других элементов */
+    padding: 10px 20px; /* Немного паддинга для отступов */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Добавим тень для улучшения видимости */
+}
+
+.right {
     display: flex;
     justify-content: flex-end;
+    gap: 20px;
 }
 
 .bookListContainer {
@@ -20,16 +36,13 @@
 .cardListWrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
+    justify-items: start;
 }
 
 @media (max-width: 600px) {
     .cardListWrapper {
-        justify-content: center;
-    }
-
-    .card {
-        flex: 1 1 100%;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
