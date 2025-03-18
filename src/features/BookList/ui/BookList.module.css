@@ -1,6 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     gap: 20px;
     width: 100%;
     margin: 0;
@@ -11,12 +12,12 @@
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    top: 0; /* Фиксируем хедер вверху */
+    top: 0;
     width: 100%;
-    background-color: white; /* Чтобы хедер не был прозрачным */
-    z-index: 100; /* Чтобы он был поверх других элементов */
-    padding: 10px 20px; /* Немного паддинга для отступов */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Добавим тень для улучшения видимости */
+    background-color: white;
+    z-index: 100;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .right {
@@ -29,14 +30,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 25px;
 }
 
 .cardListWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
     justify-items: start;
 }
 
